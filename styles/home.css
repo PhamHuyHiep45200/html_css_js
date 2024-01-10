@@ -166,3 +166,39 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.btn-outline {
+  border: 1px solid #f5811f;
+  border-radius: 6px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5811f;
+}
+.menu-select:hover .select {
+  display: block;
+}
+.select {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 0 6px #cac8c8;
+  border-radius: 6px;
+  z-index: 10;
+}
+.select-element:hover {
+  background-color: #ffeee0;
+  color: #f5811f;
+  padding-left: 4px;
+  transition: all 0.4s ease;
+  border-left: 4px solid #f5811f;
+}
+.select-scroll {
+  max-height: 200px;
+  overflow-y: scroll;
+}
