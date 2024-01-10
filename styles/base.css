@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+a{
+    text-decoration: unset;
+}
 .grid {
     width: 100%;
     display: block;
