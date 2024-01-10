@@ -937,3 +937,12 @@
 .text-24 {
   font-size: 24px !important;
 }
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}

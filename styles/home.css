@@ -21,6 +21,9 @@
   position: relative;
   cursor: pointer;
 }
+.title-movie {
+  font-size: 14px;
+}
 .menu:hover .title-movie {
   cursor: pointer;
   color: #f5811f;
@@ -190,6 +193,7 @@
   box-shadow: 0 0 6px #cac8c8;
   border-radius: 6px;
   z-index: 10;
+  font-size: 14px;
 }
 .select-element:hover {
   background-color: #ffeee0;
