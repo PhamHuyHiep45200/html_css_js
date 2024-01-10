@@ -1,102 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
 
-  <!-- Demo styles -->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .swiper-slide {
+        width: 60%;
+      }
+    </style>
+  </head>
 
-    .swiper-slide {
-      width: 60%;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Swiper -->
-  <div style="height: 400px;">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+  <body>
+    <div class="bg-white">
+      <!-- header -->
+      <div class="py-20 container flex justify-between">
+        <div class="mr-30">
+          <img
+            class="logo"
+            src="https://www.galaxycine.vn/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fgalaxy-logo-mobile.074abeac.png&w=256&q=75"
+          />
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="flex-1 flex items-center px-60">
+          <img
+            src="https://www.galaxycine.vn/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fbtn-ticket.42d72c96.webp&w=256&q=100"
+            class="img-voucher"
+          />
+          <span class="menu flex items-center ml-30">
+            <span class="title-movie mr-4">Phim</span>
+            <img src='./image/down.png' class="w-16 h-16" />
+            <div class="none modal p-20 items-center bg-white justify-center">
+              <div class="flex flex-col items-center">
+                <div>
+                  <div class="header-movie mb-10 text-18">PHIM ĐANG CHIẾU</div>
+                  <div class="grid wide">
+                    <div class="row">
+                      <div class="col c-3">
+                        <div class="card flex flex-col items-center">
+                          <div class="movie">
+                            <div class="mask">
+                              <div class="btn-by w-140 text-center py-16">
+                                <span>Mua vé</span>
+                              </div>
+                            </div>
+                            <img
+                              src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                            />
+                            <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                              <div
+                                class="flex items-end mb-5 info-star px-4 py-2"
+                              >
+                                <img src="./image/star.png" class="h-20 w-20" />
+                                <span class="font-bold text-white text-16"
+                                  >8.9</span
+                                >
+                              </div>
+                              <div class="info-date">T10</div>
+                            </div>
+                          </div>
+                          <span class="block font-bold text-12 mt-10"
+                            >Aquaman Và Vương Quốc Thất Lạc</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col c-3">
+                        <div class="card flex flex-col items-center">
+                          <div class="movie">
+                            <div class="mask">
+                              <div class="btn-by">
+                                <span>Mua vé</span>
+                              </div>
+                            </div>
+                            <img
+                              src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                            />
+                            <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                              <div
+                                class="flex items-end mb-5 info-star px-4 py-2"
+                              >
+                                <img src="./image/star.png" class="h-20 w-20" />
+                                <span class="font-bold text-white text-16"
+                                  >8.9</span
+                                >
+                              </div>
+                              <div class="info-date">T10</div>
+                            </div>
+                          </div>
+                          <span class="block font-bold text-12 mt-10"
+                            >Aquaman Và Vương Quốc Thất Lạc</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col c-3">
+                        <div class="card flex flex-col items-center">
+                          <div class="movie">
+                            <div class="mask">
+                              <div class="btn-by">
+                                <span>Mua vé</span>
+                              </div>
+                            </div>
+                            <img
+                              src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                            />
+                            <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                              <div
+                                class="flex items-end mb-5 info-star px-4 py-2"
+                              >
+                                <img src="./image/star.png" class="h-20 w-20" />
+                                <span class="font-bold text-white text-16"
+                                  >8.9</span
+                                >
+                              </div>
+                              <div class="info-date">T10</div>
+                            </div>
+                          </div>
+                          <span class="block font-bold text-12 mt-10"
+                            >Aquaman Và Vương Quốc Thất Lạc</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col c-3">
+                        <div class="card flex flex-col items-center">
+                          <div class="movie">
+                            <div class="mask">
+                              <div class="btn-by">
+                                <span>Mua vé</span>
+                              </div>
+                            </div>
+                            <img
+                              src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                            />
+                            <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                              <div
+                                class="flex items-end mb-5 info-star px-4 py-2"
+                              >
+                                <img src="./image/star.png" class="h-20 w-20" />
+                                <span class="font-bold text-white text-16"
+                                  >8.9</span
+                                >
+                              </div>
+                              <div class="info-date">T10</div>
+                            </div>
+                          </div>
+                          <span class="block font-bold text-12 mt-10"
+                            >Aquaman Và Vương Quốc Thất Lạc</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="header-movie mb-10 mt-20 text-18">
+                    PHIM SẮP CHIẾU
+                  </div>
+                  <div class="row">
+                    <div class="col c-3">
+                      <div class="card flex flex-col items-center">
+                        <div class="movie">
+                          <div class="mask">
+                            <div class="btn-by">
+                              <span>Mua vé</span>
+                            </div>
+                          </div>
+                          <img
+                            src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                          />
+                          <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                            <div
+                              class="flex items-end mb-5 info-star px-4 py-2"
+                            >
+                              <img src="./image/star.png" class="h-20 w-20" />
+                              <span class="font-bold text-white text-16"
+                                >8.9</span
+                              >
+                            </div>
+                            <div class="info-date">T10</div>
+                          </div>
+                        </div>
+                        <span class="block font-bold text-12 mt-10"
+                          >Aquaman Và Vương Quốc Thất Lạc</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col c-3">
+                      <div class="card flex flex-col items-center">
+                        <div class="movie">
+                          <div class="mask">
+                            <div class="btn-by">
+                              <span>Mua vé</span>
+                            </div>
+                          </div>
+                          <img
+                            src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                          />
+                          <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                            <div
+                              class="flex items-end mb-5 info-star px-4 py-2"
+                            >
+                              <img src="./image/star.png" class="h-20 w-20" />
+                              <span class="font-bold text-white text-16"
+                                >8.9</span
+                              >
+                            </div>
+                            <div class="info-date">T10</div>
+                          </div>
+                        </div>
+                        <span class="block font-bold text-12 mt-10"
+                          >Aquaman Và Vương Quốc Thất Lạc</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col c-3">
+                      <div class="card flex flex-col items-center">
+                        <div class="movie">
+                          <div class="mask">
+                            <div class="btn-by">
+                              <span>Mua vé</span>
+                            </div>
+                          </div>
+                          <img
+                            src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                          />
+                          <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                            <div
+                              class="flex items-end mb-5 info-star px-4 py-2"
+                            >
+                              <img src="./image/star.png" class="h-20 w-20" />
+                              <span class="font-bold text-white text-16"
+                                >8.9</span
+                              >
+                            </div>
+                            <div class="info-date">T10</div>
+                          </div>
+                        </div>
+                        <span class="block font-bold text-12 mt-10"
+                          >Aquaman Và Vương Quốc Thất Lạc</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col c-3">
+                      <div class="card flex flex-col items-center">
+                        <div class="movie">
+                          <div class="mask">
+                            <div class="btn-by">
+                              <span>Mua vé</span>
+                            </div>
+                          </div>
+                          <img
+                            src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                          />
+                          <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                            <div
+                              class="flex items-end mb-5 info-star px-4 py-2"
+                            >
+                              <img src="./image/star.png" class="h-20 w-20" />
+                              <span class="font-bold text-white text-16"
+                                >8.9</span
+                              >
+                            </div>
+                            <div class="info-date">T10</div>
+                          </div>
+                        </div>
+                        <span class="block font-bold text-12 mt-10"
+                          >Aquaman Và Vương Quốc Thất Lạc</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span>
+          <span class="menu menu-select flex items-center ml-30">
+            <span class="title-movie mr-4">Góc Điện Ảnh</span>
+            <img src='./image/down.png' class="w-16 h-16" />
+            <div class="select">
+              <span class="block py-10 select-element w-full text-center">Thể Loại Phim</span>
+              <span class="block py-10 select-element w-full text-center">Diễn Viên</span>
+              <span class="block py-10 select-element w-full text-center">Đạo Diễn</span>
+              <span class="block py-10 select-element w-full text-center">Bình Luận Phim</span>
+              <span class="block py-10 select-element w-full text-center">Blog Điện Ảnh</span>
+            </div>
+          </span>
+          <span class="menu menu-select flex items-center ml-30">
+            <span class="title-movie mr-4">Sự Kiện</span>
+            <img src='./image/down.png' class="w-16 h-16" />
+            <div class="select">
+              <span class="block py-10 select-element w-full text-center">Ưu Đãi</span>
+              <span class="block py-10 select-element w-full text-center">Phim Hay Tháng</span>
+            </div>
+          </span>
+          <span class="menu menu-select flex items-center ml-30">
+            <span class="title-movie mr-4">Rạp/Giá Vé</span>
+            <img src='./image/down.png' class="w-16 h-16" />
+            <div class="select select-scroll">
+              <span class="block py-10 select-element w-full text-center">Galaxy Nguyễn Du</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Ba Đình</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Đà Nẵng</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Nguyễn Ngọc Vũ</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Hai Bà Trưng</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Lê Đức Thọ</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Quận 3</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Bến Tre</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Long Biên</span>
+              <span class="block py-10 select-element w-full text-center">Galaxy Trung Chánh</span>
+            </div>
+          </span>
+        </div>
+        <div class="flex items-center text-gray">
+          <span class="mx-20">Đăng nhập</span>
+          <img src="https://www.galaxycine.vn/_next/static/media/join-Gstar.24c52de9.svg" />
+        </div>
       </div>
-  </div>
+      <!-- slide -->
+      <div style="height: 450px; position: relative;">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F28%2Favatar-2-chi-119k-4_1703744337517.jpg&w=3840&q=75"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2024%2F1%2F3%2Fbeekeeper-2048_1704265157841.jpg&w=3840&q=75"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F26%2Fqc-2048_1703563687054.jpg&w=3840&q=75"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2024%2F1%2F4%2Fbanner-web-2048x682_1704359611009.jpg&w=3840&q=75"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="search flex justify-between">
+          <div class="h-full flex items-center pl-10 flex-1">
+            <div class="flex h-full items-center">
+              <span class="search-num">1</span>
+              <span class="select1 pl-10">Chọn phim</span>
+            </div>
+          </div>
+          <div class="h-full flex items-center pl-10 flex-1">
+            <div class="flex h-full items-center">
+              <span class="search-num">2</span>
+              <span class="select1 pl-10">Chọn Rạp</span>
+            </div>
+          </div>
+          <div class="h-full flex items-center pl-10 flex-1">
+            <div class="flex h-full items-center">
+              <span class="search-num">3</span>
+              <span class="select1 pl-10">Chọn Ngày</span>
+            </div>
+          </div>
+          <div class="h-full flex items-center pl-10 flex-1">
+            <div class="flex h-full items-center">
+              <span class="search-num">4</span>
+              <span class="select1 pl-10">Chọn Suất</span>
+            </div>
+          </div>
+          <div class="bg-primary btn-by-flash flex items-center justify-center text-white flex-1">
+            Mua Vé Nhanh
+          </div>
+        </div>
+      </div>
+      <!-- home 1 -->
+      <div class="px-30 home1">
+        <div class="container">
+          <div class="header-movie mb-10 mt-20 text-18">PHIM</div>
+          <div class="row">
+            <div class="col c-3">
+              <div class="card flex flex-col items-center">
+                <div class="movie">
+                  <div
+                    class="mask flex flex-col items-center justify-content-center"
+                  >
+                    <div class="btn-by w-140 text-center py-16">
+                      <span>Mua vé</span>
+                    </div>
+                    <div
+                      class="btn-trailer mt-6 w-140 text-center py-16 flex items-center"
+                    >
+                      <img src="./image/play.png" class="w-20 h-20" />
+                      <span class="ml-4 text-black">Trailer</span>
+                    </div>
+                  </div>
+                  <img
+                    src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                  />
+                  <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                    <div class="flex items-end mb-5 info-star px-4 py-2">
+                      <img src="./image/star.png" class="h-20 w-20" />
+                      <span class="font-bold text-white text-16">8.9</span>
+                    </div>
+                    <div class="info-date">T10</div>
+                  </div>
+                </div>
+                <span class="block text-18 mt-10"
+                  >Aquaman Và Vương Quốc Thất Lạc</span
+                >
+              </div>
+            </div>
+            <div class="col c-3">
+              <div class="card flex flex-col items-center">
+                <div class="movie">
+                  <div class="mask flex flex-col items-center justify-content-center">
+                    <div class="btn-by w-140 text-center py-16">
+                      <span>Mua vé</span>
+                    </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                    <div
+                      class="btn-trailer mt-6 w-140 text-center py-16 flex items-center"
+                    >
+                      <img src="./image/play.png" class="w-20 h-20" />
+                      <span class="ml-4 text-black">Trailer</span>
+                    </div>
+                  </div>
+                  <img
+                    src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                  />
+                  <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                    <div class="flex items-end mb-5 info-star px-4 py-2">
+                      <img src="./image/star.png" class="h-20 w-20" />
+                      <span class="font-bold text-white text-16">8.9</span>
+                    </div>
+                    <div class="info-date">T10</div>
+                  </div>
+                </div>
+                <span class="block text-18 mt-10"
+                  >Aquaman Và Vương Quốc Thất Lạc</span
+                >
+              </div>
+            </div>
+            <div class="col c-3">
+              <div class="card flex flex-col items-center">
+                <div class="movie">
+                  <div class="mask flex flex-col items-center justify-content-center">
+                    <div class="btn-by w-140 text-center py-16">
+                      <span>Mua vé</span>
+                    </div>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-</body>
+                    <div
+                      class="btn-trailer mt-6 w-140 text-center py-16 flex items-center"
+                    >
+                      <img src="./image/play.png" class="w-20 h-20" />
+                      <span class="ml-4 text-black">Trailer</span>
+                    </div>
+                  </div>
+                  <img
+                    src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                  />
+                  <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                    <div class="flex items-end mb-5 info-star px-4 py-2">
+                      <img src="./image/star.png" class="h-20 w-20" />
+                      <span class="font-bold text-white text-16">8.9</span>
+                    </div>
+                    <div class="info-date">T10</div>
+                  </div>
+                </div>
+                <span class="block text-18 mt-10"
+                  >Aquaman Và Vương Quốc Thất Lạc</span
+                >
+              </div>
+            </div>
+            <div class="col c-3">
+              <div class="card flex flex-col items-center">
+                <div class="movie">
+                  <div class="mask flex flex-col items-center justify-content-center">
+                    <div class="btn-by w-140 text-center py-16">
+                      <span>Mua vé</span>
+                    </div>
 
+                    <div
+                      class="btn-trailer mt-6 w-140 text-center py-16 flex items-center"
+                    >
+                      <img src="./image/play.png" class="w-20 h-20" />
+                      <span class="ml-4 text-black">Trailer</span>
+                    </div>
+                  </div>
+                  <img
+                    src="https://www.galaxycine.vn/_next/image/?url=https%3A%2F%2Fcdn.galaxycine.vn%2Fmedia%2F2023%2F12%2F22%2Faquaman-500_1703216418325.jpg&w=384&q=75"
+                  />
+                  <div class="info-movie flex flex-col mr-10 mb-10 items-end">
+                    <div class="flex items-end mb-5 info-star px-4 py-2">
+                      <img src="./image/star.png" class="h-20 w-20" />
+                      <span class="font-bold text-white text-16">8.9</span>
+                    </div>
+                    <div class="info-date">T10</div>
+                  </div>
+                </div>
+                <span class="block text-18 mt-10"
+                  >Aquaman Và Vương Quốc Thất Lạc</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-30 flex justify-center">
+        <span class="btn-outline">Xem Thêm</span>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
