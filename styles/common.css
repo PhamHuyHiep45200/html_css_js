@@ -1,8 +1,25 @@
 .cursor-pointer {
   cursor: pointer;
 }
+.divider {
+  background-color: rgb(224, 224, 224);
+  height: 2px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.divider-2 {
+  background-color: rgb(224, 224, 224);
+  height: 4px;
+  width: 100%;
+  margin: 40px 0;
+}
+
 .font-bold {
   font-weight: bold;
+}
+.opacity-1{
+  opacity: 1 !important;
 }
 .radius-2 {
   border-radius: 2px;
@@ -16,8 +33,17 @@
 .radius-8 {
   border-radius: 8px;
 }
+.font-nutusan {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .text-primary {
   color: #f5811f;
+}
+.text-des {
+  color: #4a4a4a;
+}
+.text-blue {
+  color: rgb(52, 52, 255);
 }
 .text-gray {
   color: gray;
@@ -32,7 +58,7 @@
   background-color: #f5811f;
 }
 .w-full {
-  width: 100%;
+  width: 100% !important;
 }
 .bg-white {
   background-color: white !important;
@@ -42,10 +68,10 @@
 }
 /* flex */
 .none{
-  display: none;
+  display: none !important;
 }
 .block {
-  display: block;
+  display: block !important;
 }
 .flex {
   display: flex;
@@ -358,6 +384,9 @@
 }
 .mb-30 {
   margin-bottom: 30px;
+}
+.mb-100 {
+  margin-bottom: 100px;
 }
 
 /* margin left */

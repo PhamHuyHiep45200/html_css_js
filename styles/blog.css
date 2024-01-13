@@ -66,7 +66,7 @@ html {
   text-transform: capitalize;
 }
 
-.news-content .btn-like {
+.btn-like {
   background-color: #4080ff;
   border-radius: 4px;
   color: white;
@@ -78,8 +78,8 @@ html {
   align-items: center;
 }
 
-.news-content .btn-like svg,
-.news-content .btn-view svg {
+.btn-like svg,
+.btn-view svg {
   height: 0.625rem;
   padding-right: 2px;
 }
@@ -88,7 +88,7 @@ html {
   background-color: #1e40af;
 }
 
-.news-content .btn-view {
+.btn-view {
   background-color: #e9edf1;
   border-radius: 4px;
   height: 25px;
@@ -100,7 +100,7 @@ html {
   margin-left: 10px;
 }
 
-.news-content .new-content {
+.new-content {
   margin-top: 8px;
   font-family: Nunito Sans, sans-serif !important;
   font-style: inherit !important;

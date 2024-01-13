@@ -1,5 +1,3 @@
-.header {}
-
 .h-80 {
   height: 80px;
 }
@@ -51,7 +49,7 @@
 }
 
 .menu:hover .modal {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 
@@ -333,4 +331,123 @@
 }
 .footer-container .footer-info .info-company p a:hover {
   color: #f5811f;
+}
+.auth-mask {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.auth-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+}
+.form-input {
+  border: 1px solid #cbcbcb99;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0 10px;
+  height: 40px;
+  width: 328px;
+  outline: none;
+  color: #333;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 1px 1px rgb(0, 94, 255);
+}
+.forgot-pass:hover {
+  color: #f5811f;
+}
+.hover-btn-by:hover {
+  transition: all ease 0.5s;
+  background-color: #f5811f;
+  border-radius: 3px;
+  padding: 12px 30px;
+  color: white;
+  z-index: 1;
+}
+.auth-close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(237, 234, 234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  top: 20px;
+}
+
+.auth-close img {
+  width: 15px;
+  height: 15px;
+}
+
+.animation-auth {
+  animation: fadeDisplay ease 0.5s;
+}
+
+.blog-img {
+  height: 400px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.blog-img:hover{
+  transform: scale(1.05);
+  transition: all ease 0.5s;
+}
+
+.blog-img:not(:hover){
+  transform: scale(1);
+  transition: all ease 0.5s;
+}
+
+.img-blog-home {
+  width: 190px !important;
+  height: 130px !important;
+  border-radius: 4px;
+}
+.img-blog-home:hover{
+  transform: scale(1.03);
+  transition: all ease 0.5s;
+}
+
+.img-blog-home:not(:hover){
+  transform: scale(1);
+  transition: all ease 0.5s;
+}
+
+.img-voucher-home {
+  height: 180px !important;
+}
+.select-movie {
+  position: relative;
+}
+.modal-select-movie {
+  position: absolute;
+  left: 0;
+}
+.card-select-home {
+  margin: 0 !important;
+}
+.card-select-home .select-el {
+  border: none !important;
+}
+
+@keyframes fadeDisplay {
+  from {
+    opacity: 0.4;
+  } to {
+    opacity: 1;
+  }
 }
